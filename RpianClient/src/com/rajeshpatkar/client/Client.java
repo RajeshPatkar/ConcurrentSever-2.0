@@ -9,7 +9,7 @@ public class Client {
     public static void main(String[] args) throws Exception {
         System.out.println("Client Signing on");
           try {
-            Socket soc = new Socket("192.168.1.213", 8096);
+            Socket soc = new Socket("127.0.0.1", 8096);
             Reader r = new Reader(soc);
             r.start();
             System.out.println("Client says connection establised");

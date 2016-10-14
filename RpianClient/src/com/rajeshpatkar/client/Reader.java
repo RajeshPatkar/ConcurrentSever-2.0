@@ -22,7 +22,7 @@ class Reader extends Thread {
             String str = nis.readLine();
             while( !str.equals("End") )
             {
-             System.out.println("server send back = " +str );
+             System.out.println("Message from Server >> " +str );
              str = nis.readLine();
             }
         } catch (Exception e) {
