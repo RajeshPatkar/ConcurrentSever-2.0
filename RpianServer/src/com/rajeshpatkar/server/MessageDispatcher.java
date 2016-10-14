@@ -1,4 +1,4 @@
-package com.rajeshpatkar;
+package com.rajeshpatkar.server;
 
 import java.io.PrintWriter;
 
