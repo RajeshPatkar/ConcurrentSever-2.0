@@ -8,6 +8,7 @@ public class Server {
     public static MessageQueue<String> q = new MessageQueue<>();
     public static ArrayList<PrintWriter> noslist = new ArrayList<>();
     public static void main(String[] args) throws Exception {
+        System.out.println("Server Signing ON");
         ServerSocket ss = new ServerSocket(8096);
         MessageDispatcher md = new MessageDispatcher();
         md.setDaemon(true);
@@ -19,6 +20,7 @@ public class Server {
             Conversation c = new Conversation( soc );
             c.start();
         }
+        System.out.println("Server Signing ON");
     }
     
 }

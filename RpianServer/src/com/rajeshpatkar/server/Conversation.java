@@ -34,7 +34,11 @@ public class Conversation extends Thread {
                 str = nis.readLine();
             }
             nos.println("End");
-            Server.noslist.remove(nos);    
+            Server.noslist.remove(nos); 
+            System.out.println(
+                    "Connection with "+
+                     soc.getInetAddress().getHostAddress()+
+                    " Terminated");
         } catch (Exception e) {
         }
     }
