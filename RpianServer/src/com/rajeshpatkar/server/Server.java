@@ -20,7 +20,7 @@ public class Server {
             Conversation c = new Conversation( soc );
             c.start();
         }
-        System.out.println("Server Signing ON");
+        System.out.println("Server Signing OFF");
     }
     
 }
