@@ -1,4 +1,4 @@
-package com.rajeshpatkar;
+package com.rajeshpatkar.client;
 
 import java.io.*;
 import java.net.*;
