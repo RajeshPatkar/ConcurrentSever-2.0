@@ -27,7 +27,7 @@ public class Client {
         clientTextArea.append("Client Signing on\n");
           try {
             Socket soc = new Socket("127.0.0.1", 8096);
-            Reader r = new Reader(soc);
+            Reader r = new Reader(soc,clientTextArea);
             r.start();
             System.out.println("Client says connection establised");
               clientTextArea.append("Client says connection established\n");
@@ -39,8 +39,12 @@ public class Client {
 
               ActionListener a1 = (e)->{
                 String str = clientTextField.getText();
-                  if(!str.equals("end")){
+                  if(!str.equals("End")){
                       nos.println(str);
+                      clientTextField.setText("");
+                  }else{
+                      nos.println(str);
+                      clientTextArea.setText("");
                   }
 
               };
