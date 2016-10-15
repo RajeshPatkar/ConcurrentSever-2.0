@@ -16,7 +16,7 @@ public class Server {
         serverFrame.setSize(400,400);
         serverFrame.setVisible(true);
         serverFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        serverText.append("Server Signing ON\n");
         System.out.println("Server Signing ON");
         ServerSocket ss = new ServerSocket(8096);
         MessageDispatcher md = new MessageDispatcher();
