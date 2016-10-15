@@ -2,6 +2,7 @@ package com.rajeshpatkar.client;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -29,11 +30,23 @@ public class Client {
             Reader r = new Reader(soc);
             r.start();
             System.out.println("Client says connection establised");
+              clientTextArea.append("Client says connection established\n");
 
             OutputStream out = soc.getOutputStream();
             OutputStreamWriter osw = new OutputStreamWriter(out);
             BufferedWriter br = new BufferedWriter(osw);
             PrintWriter nos = new PrintWriter(br, true);
+
+              ActionListener a1 = (e)->{
+                String str = clientTextField.getText();
+                  if(!str.equals("end")){
+                      nos.println(str);
+                  }
+
+              };
+              clientButton.addActionListener(a1);
+
+
             BufferedReader kin = new BufferedReader(
                     new InputStreamReader(
                             System.in

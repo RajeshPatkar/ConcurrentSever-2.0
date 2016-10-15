@@ -31,6 +31,7 @@ public class Conversation extends Thread {
             while (!str.equals("End")) {
                 Server.q.enqueue(str);
                 System.out.println("Server Received "+str);
+                Server.serverText.append("Server Received "+str+"\n");
                 str = nis.readLine();
             }
             nos.println("End");

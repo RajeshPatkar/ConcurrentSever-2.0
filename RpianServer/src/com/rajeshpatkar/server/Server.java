@@ -9,9 +9,10 @@ import java.util.ArrayList;
 public class Server {
     public static MessageQueue<String> q = new MessageQueue<>();
     public static ArrayList<PrintWriter> noslist = new ArrayList<>();
+    public static JTextArea serverText;
     public static void main(String[] args) throws Exception {
         JFrame serverFrame = new JFrame("server");
-        JTextArea serverText = new JTextArea(20,20);
+        serverText = new JTextArea(20,20);
         serverFrame.add(BorderLayout.CENTER,serverText);
         serverFrame.setSize(400,400);
         serverFrame.setVisible(true);
