@@ -1,5 +1,7 @@
 package com.rajeshpatkar.server;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.PrintWriter;
 import java.net.*;
 import java.util.ArrayList;
@@ -8,6 +10,13 @@ public class Server {
     public static MessageQueue<String> q = new MessageQueue<>();
     public static ArrayList<PrintWriter> noslist = new ArrayList<>();
     public static void main(String[] args) throws Exception {
+        JFrame serverFrame = new JFrame("server");
+        JTextArea serverText = new JTextArea(20,20);
+        serverFrame.add(BorderLayout.CENTER,serverText);
+        serverFrame.setSize(400,400);
+        serverFrame.setVisible(true);
+        serverFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         System.out.println("Server Signing ON");
         ServerSocket ss = new ServerSocket(8096);
         MessageDispatcher md = new MessageDispatcher();
